@@ -90,4 +90,48 @@ document.addEventListener("DOMContentLoaded", () => {
             header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.05)";
         }
     });
+
+    /* =========================================
+       4. 30초 한정 프로모션 팝업 배너 (옵션 B)
+       ========================================= */
+    const promoModal = document.getElementById("promo-banner-modal");
+    const promoCloseBtn = document.getElementById("promo-close-btn");
+    const promoTimerFill = document.getElementById("promo-timer-fill");
+    
+    if (promoModal && promoCloseBtn && promoTimerFill) {
+        // 이미 닫았는지 확인 (세션 스토리지 사용 - 새로고침하면 다시 안뜨게 할 수도 있으나 일단 매번 뜨게 하려면 무시)
+        // 여기서는 요건에 맞게 매번 접속시 뜨게 하되 오늘 하루 안보기 기능을 넣을 수도 있음. 
+        // 심플하게 무조건 뜨고 30초 뒤 사라지게 구현.
+        
+        let promoTimeout;
+
+        // 배너 숨기기 함수
+        const closePromoBanner = () => {
+            promoModal.classList.remove("show");
+            if (promoTimeout) clearTimeout(promoTimeout);
+        };
+
+        // 닫기 버튼 클릭 시 숨김
+        promoCloseBtn.addEventListener("click", () => {
+            closePromoBanner();
+            // 오늘 하루 안보기 설정 (옵션)
+            sessionStorage.setItem("hidePromo", "true");
+        });
+
+        // 세션에 숨김 기록이 없다면 1.5초 뒤 팝업 띄우기
+        if (sessionStorage.getItem("hidePromo") !== "true") {
+            setTimeout(() => {
+                promoModal.classList.add("show");
+                
+                // 30초 카운트다운 진행바 애니메이션
+                promoTimerFill.style.transition = "width 30s linear";
+                promoTimerFill.style.width = "0%";
+                
+                // 30초 뒤 자동 숨김
+                promoTimeout = setTimeout(() => {
+                    closePromoBanner();
+                }, 30000);
+            }, 1500);
+        }
+    }
 });

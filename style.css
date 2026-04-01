@@ -463,6 +463,113 @@ footer {
 }
 
 /* -------------------------------------------
+   프로모션 팝업 배너 (옵션 B)
+------------------------------------------- */
+.promo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.promo-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.promo-banner-b {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  padding: 35px 25px 20px 25px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border: 4px solid var(--primary-color);
+  transform: translateY(50px) scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-overlay.show .promo-banner-b {
+  transform: translateY(0) scale(1);
+}
+
+.promo-title {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.promo-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.promo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promo-call-btn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(226, 0, 15, 0.3);
+  transition: transform 0.2s;
+}
+
+.promo-call-btn:hover {
+  transform: translateY(-2px);
+  background: #C4000C;
+}
+
+.promo-close-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.promo-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #eee;
+}
+
+.promo-progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  width: 100%;
+  transition: width linear;
+}
+
+/* -------------------------------------------
    반응형 미디어 쿼리 (태블릿, 모바일)
 ------------------------------------------- */
 @media screen and (max-width: 900px) {
