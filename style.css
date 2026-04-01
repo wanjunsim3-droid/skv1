@@ -1,0 +1,510 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+/* -------------------------------------------
+   CSS 변수 설정 (SK V1 브랜드 주요 컬러)
+------------------------------------------- */
+:root {
+  --primary-color: #E2000F; /* SK V1 포인트 레드 */
+  --secondary-color: #333333; /* 다크 그레이 */
+  --bg-color: #FAFAFA; /* 밝은 배경 */
+  --text-dark: #1A1A1A;
+  --text-gray: #666666;
+  --header-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* -------------------------------------------
+   기본 스타일
+------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-red {
+  color: var(--primary-color);
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------------------------------------------
+   헤더 (Header)
+------------------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+
+/* 내비게이션바 (GNB) */
+.gnb ul {
+  display: flex;
+  gap: 30px;
+}
+
+.gnb a {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-gray);
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.gnb a:hover, .gnb a.active {
+  color: var(--primary-color);
+}
+
+/* 밑줄 애니메이션 */
+.gnb a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.gnb a:hover::after, .gnb a.active::after {
+  width: 100%;
+}
+
+/* 상단 전화 연결 버튼 */
+.contact-number .call-btn-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(226, 0, 15, 0.2);
+}
+
+.contact-number .call-btn-header:hover {
+  transform: translateY(-2px);
+  background-color: #CC000D;
+}
+
+/* -------------------------------------------
+   모바일 버튼 및 사이드 메뉴
+------------------------------------------- */
+.mobile-menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 2000;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-header h2 {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+.mobile-menu ul {
+  padding: 20px 0;
+}
+
+.mobile-menu li a {
+  display: block;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid #f5f5f5;
+  transition: background-color 0.2s;
+}
+
+.mobile-menu li a:hover, .mobile-menu li a.active {
+  background-color: #fff0f1;
+  color: var(--primary-color);
+}
+
+.mobile-contact {
+  margin-top: auto;
+  padding: 20px;
+}
+
+.mobile-contact.btn-call-mobile {
+  padding: 15px;
+  border-radius: 8px;
+}
+.btn-call-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* -------------------------------------------
+   메인 콘텐츠
+------------------------------------------- */
+main {
+  margin-top: 80px; /* 헤더 여백 */
+  min-height: calc(100vh - 250px);
+}
+
+.hero-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-banner {
+  width: 100%;
+  max-width: 1920px;
+  object-fit: cover;
+  animation: fadeIn 1s ease-out;
+}
+
+/* -------------------------------------------
+   뷰어 섹션 (탭 전환 영역)
+------------------------------------------- */
+.content-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  min-height: 800px; /* 로딩 깜빡임 방지용 최소높이 */
+  padding: 0 10px;
+  position: relative;
+}
+
+.tab-content {
+  display: none;
+  animation: slideUpFade 0.6s ease forwards;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.slide-img {
+  width: 100%;
+  max-width: 1000px; /* 이미지 최대 가로 사이즈 설정 */
+  margin: 0 auto 30px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.slide-img:hover {
+  transform: translateY(-5px);
+}
+
+/* 중간 분양 상담 섹션 (Call to Action) */
+.consult-banner {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a1a 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 60px;
+}
+
+.consult-container h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.consult-container p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.btn-consult-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 800;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-consult-large:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(226, 0, 15, 0.4);
+}
+
+/* -------------------------------------------
+   플로팅 버튼 (우측 하단)
+------------------------------------------- */
+.floating-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+}
+
+.floating-button a {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, var(--primary-color), #FF3B30);
+  color: #fff;
+  padding: 10px 25px 10px 10px;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(226, 0, 15, 0.3);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-button a:hover {
+  transform: scale(1.08) translateY(-5px);
+}
+
+.fab-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-right: 15px;
+  animation: pulseRotate 2s infinite;
+}
+
+.fab-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.fab-text span {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.fab-text strong {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* -------------------------------------------
+   푸터 (Footer)
+------------------------------------------- */
+footer {
+  background-color: #222;
+  color: #999;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.footer-notice {
+  margin-top: 15px;
+  font-size: 12px !important;
+  color: #666;
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* -------------------------------------------
+   애니메이션 효과
+------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseRotate {
+  0% { transform: scale(1) rotate(0); box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+  50% { transform: scale(1.1) rotate(5deg); box-shadow: 0 0 0 10px rgba(255,255,255,0); }
+  100% { transform: scale(1) rotate(0); box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+/* -------------------------------------------
+   반응형 미디어 쿼리 (태블릿, 모바일)
+------------------------------------------- */
+@media screen and (max-width: 900px) {
+  .gnb, .contact-number {
+    display: none; /* 모바일에서는 숨김 처리 */
+  }
+  
+  .mobile-menu-btn {
+    display: block; /* 햄버거 메뉴 표시 */
+  }
+
+  /* 플로팅 버튼 모바일 대응 (약간 작게) */
+  .floating-button {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .floating-button a {
+    padding: 8px 15px 8px 8px;
+  }
+
+  .fab-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .fab-text span {
+    font-size: 10px;
+  }
+  
+  .fab-text strong {
+    font-size: 15px;
+  }
+  
+  .consult-banner h3 {
+    font-size: 22px;
+  }
+  
+  .btn-consult-large {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+}

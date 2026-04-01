@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="청라 SK V1 지식산업센터 공식 상담 페이지입니다. (문의: 1666-5984)">
+    <title>청라 SK V1 - 프리미엄 지식산업센터</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 헤더 영역 -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <h1><span class="text-red">청라</span> SK V1</h1>
+                </a>
+            </div>
+            
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#group1" class="tab-link active" data-target="group1">프로젝트 개요</a></li>
+                    <li><a href="#group2" class="tab-link" data-target="group2">프리미엄 가치</a></li>
+                    <li><a href="#group3" class="tab-link" data-target="group3">입지환경 분석</a></li>
+                    <li><a href="#group4" class="tab-link" data-target="group4">층별 평면도</a></li>
+                </ul>
+            </nav>
+            
+            <div class="contact-number">
+                <a href="tel:1666-5984" class="call-btn-header">
+                    <i class="fas fa-phone-alt"></i> 1666-5984
+                </a>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 모바일 메뉴 -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>메뉴</h2>
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="#group1" class="tab-link-mobile" data-target="group1">프로젝트 개요</a></li>
+            <li><a href="#group2" class="tab-link-mobile" data-target="group2">프리미엄 가치</a></li>
+            <li><a href="#group3" class="tab-link-mobile" data-target="group3">입지환경 분석</a></li>
+            <li><a href="#group4" class="tab-link-mobile" data-target="group4">층별 평면도</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:1666-5984" class="btn-call-mobile">
+                <i class="fas fa-phone"></i> 분양문의 1666-5984
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- 상담북 브로슈어 컨텐츠 영역 (탭 그룹) -->
+        <section class="content-section" id="viewer-section">
+            <!-- 탭 전환 애니메이션용 로더 -->
+            <div class="loader" style="display:none;"></div>
+            
+            <div class="tab-content active" id="group1">
+                <!-- Group 1: Slide 1~5 -->
+                <script>
+                    for(let i=1; i<=5; i++){
+                        document.write(`<img src="images/slide_${i.toString().padStart(2, '0')}.jpg" alt="프로젝트 개요 ${i}" class="slide-img" loading="lazy">`);
+                    }
+                </script>
+            </div>
+            <div class="tab-content" id="group2">
+                <!-- Group 2: Slide 6~12 -->
+                <script>
+                    for(let i=6; i<=12; i++){
+                        document.write(`<img src="images/slide_${i.toString().padStart(2, '0')}.jpg" alt="프리미엄 가치 ${i}" class="slide-img" loading="lazy">`);
+                    }
+                </script>
+            </div>
+            <div class="tab-content" id="group3">
+                <!-- Group 3: Slide 13~20 -->
+                <script>
+                    for(let i=13; i<=20; i++){
+                        document.write(`<img src="images/slide_${i.toString().padStart(2, '0')}.jpg" alt="입지환경 분석 ${i}" class="slide-img" loading="lazy">`);
+                    }
+                </script>
+            </div>
+            <div class="tab-content" id="group4">
+                <!-- Group 4: Slide 21~29 -->
+                <script>
+                    for(let i=21; i<=29; i++){
+                        document.write(`<img src="images/slide_${i.toString().padStart(2, '0')}.jpg" alt="층별 평면도 ${i}" class="slide-img" loading="lazy">`);
+                    }
+                </script>
+            </div>
+        </section>
+        
+        <!-- 하단 상담 배너 영역 -->
+        <section class="consult-banner">
+            <div class="consult-container">
+                <h3>방문예약 및 분양상담</h3>
+                <p>정확하고 친절한 상담으로 고객님의 성공적인 비즈니스를 돕겠습니다.</p>
+                <a href="tel:1666-5984" class="btn-consult-large">
+                    <i class="fas fa-headset"></i> 1666-5984
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 플로팅 하단/우측 전화 연결 버튼 -->
+    <div class="floating-button">
+        <a href="tel:1666-5984">
+            <div class="fab-icon">
+                <i class="fas fa-phone-volume"></i>
+            </div>
+            <div class="fab-text">
+                <span>청라 SK V1 분양문의</span>
+                <strong>1666-5984</strong>
+            </div>
+        </a>
+    </div>
+
+    <!-- 하단 푸터 영역 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">청라 SK V1</div>
+            <p>대표번호 : 1666-5984</p>
+            <p class="footer-notice">※ 본 사이트의 이미지, 기재된 내용, CG 등은 소비자의 이해를 돕기 위한 것으로 실제와 다를 수 있습니다.</p>
+            <p class="copyright">&copy; 2024 CHEONGNA SK V1. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
