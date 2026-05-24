@@ -1,0 +1,43 @@
+이번에는 청라 IHP(인천하이테크파크) 도시첨단산업단지에 위치한 **'청라 SK V1'**에 맞추어 비디오 프롬프트를 전면 수정해 드리겠습니다.
+
+마곡이 '자연과 오피스의 조화'였다면, 청라 IHP SK V1은 '압도적인 물류 스케일', '첨단 산업단지의 인프라', 그리고 **'SK V1이라는 1군 브랜드의 신뢰감'**을 강조하는 것이 핵심입니다.
+
+1. 핵심 소구점 (Key Selling Points) 분석
+입지적 장점 (청라 IHP 산단): 대규모 첨단산업 인프라, 청라국제도시의 비전, 우수한 교통 및 물류 네트워크.
+상품적 장점 (청라 SK V1): 1군 건설사(SK에코플랜트)의 프리미엄 지식산업센터, 초대형 스케일, 제조업에 특화된 강력한 물류 시스템(직선형 드라이브인, 도어투도어).
+2. 시각적 연출 방향 (Visual Concept)
+톤 앤 매너: 웅장한(Epic), 역동적인(Dynamic), 견고하고 신뢰감 있는(Solid & Reliable), 하이테크(High-tech).
+카메라 워크: 속도감 있는 드론 뷰, 거대한 스케일을 보여주는 광각(Wide angle), 물류의 역동성을 보여주는 트래킹 샷(Tracking shot).
+🎬 청라 IHP SK V1 맞춤형 영상 프롬프트
+Scene 1: 첨단 산업의 중심, IHP 산단과 거대한 스케일
+
+연출 의도: 청라국제도시와 IHP 첨단산업단지의 거대한 인프라를 보여주며, 그 중심에 우뚝 선 랜드마크로서의 청라 SK V1을 강조합니다.
+영상 내용: 세련된 청라국제도시의 도심을 배경으로, 끝없이 펼쳐진 IHP 첨단산업단지 위를 드론이 빠르게 비행합니다. 카메라가 웅장하고 거대한 스케일의 '청라 SK V1' 건물을 향해 다가가며 압도적인 위용을 보여줍니다.
+영문 프롬프트 예시:
+Fast cinematic drone shot flying over a massive, high-tech industrial park (IHP) with a modern international city skyline in the background. The camera zooms towards a gigantic, premium commercial building (SK V1) with a sleek and solid architectural design. Epic scale, dynamic movement, morning sunlight, 8k resolution, photorealistic.
+
+Scene 2: 1군 브랜드의 신뢰감과 웅장한 외관
+
+연출 의도: SK V1만의 프리미엄 외관 디자인과 견고함을 통해 비즈니스의 신뢰감을 전달합니다.
+영상 내용: 태양 빛이 반사되는 건물의 웅장한 통유리와 단단한 외관 패널. 카메라가 로우 앵글에서 위로 부드럽게 틸트업(Tilt-up)하며 건물의 거대한 입면과 꼭대기에 빛나는 로고(SK V1)를 잡아냅니다.
+영문 프롬프트 예시:
+Low angle tracking shot of a monumental, hyper-modern industrial center building. The building features a combination of sleek glass facades and solid metallic panels, reflecting the bright sun. The camera tilts up to reveal the massive scale of the architecture. Corporate reliability, premium brand, highly detailed, architectural rendering.
+
+Scene 3: 제조업 특화! 압도적인 직선형 드라이브인 (Drive-in)
+
+연출 의도: 청라 SK V1의 가장 큰 장점인 '제조업 특화 물류 시스템'을 시각적으로 역동성 있게 보여줍니다.
+영상 내용: 크고 무거운 화물차(대형 트럭)가 넓고 층고가 높은 직선형 램프를 거침없이 올라갑니다. 공장 바로 앞(도어투도어)에 주차를 하고 지게차가 빠르게 물류를 옮기는 역동적이고 효율적인 산업 현장.
+영문 프롬프트 예시:
+Dynamic action tracking shot of a large cargo truck driving smoothly up a wide, high-ceilinged straight ramp inside a massive modern industrial facility. The truck parks directly in front of a wide factory door (door-to-door system). A forklift is efficiently moving pallets. High-tech logistics, bright industrial lighting, hyper-realistic, cinematic motion.
+
+Scene 4: 스마트 팩토리 및 첨단 오피스 공간
+
+연출 의도: 쾌적하고 층고가 높은 내부 공간을 통해 첨단 제조업과 오피스가 결합된 완벽한 비즈니스 공간임을 어필합니다.
+영상 내용: 층고가 매우 높은 실내. 한쪽에는 첨단 기계들이 돌아가는 깔끔한 스마트 팩토리 시설이 있고, 다른 한쪽에는 쾌적하고 세련된 복층형 오피스에서 회의하는 사람들의 모습이 보입니다.
+영문 프롬프트 예시:
+Wide interior shot of a smart factory combined with a modern office. Extremely high ceilings. On one side, clean, high-tech manufacturing equipment is operating. On the other side, business professionals are having a meeting in a sleek, glass-walled office area. Bright daylight, highly detailed, futuristic workspace, 8k.
+
+💡 활용 팁
+청라 SK V1의 경우 **'물류의 편리함(Scene 3)'**이 고객들에게 가장 중요한 포인트이므로, 트럭이 이동하는 드라이브인 씬을 가장 역동적이고 길게 연출하는 것이 좋습니다.
+제공된 영문 프롬프트를 생성형 AI(Runway Gen-2 등)에 입력하실 때, 원하시는 트럭의 종류나 계절감(예: 맑은 가을 하늘)을 추가하시면 더욱 원하는 결과물에 가까워집니다.
+오전 12:05
