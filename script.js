@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // 모바일/PC 상관없이 탭 선택 시 화면 상단으로 부드럽게 스크롤
                 // 헤더 높이(80px)를 감안한 여백
                 const headerOffset = 100;
-                const elementPosition = viewerSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const elementPosition = viewerSection.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
                 
                 window.scrollTo({
                     top: offsetPosition,
@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
-        if(window.scrollY > 50) {
-            header.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.1)";
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
         } else {
-            header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.05)";
+            header.classList.remove('scrolled');
         }
     });
 
@@ -114,12 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // 닫기 버튼 클릭 시 숨김
         promoCloseBtn.addEventListener("click", () => {
             closePromoBanner();
-            // 오늘 하루 안보기 설정 (옵션)
-            sessionStorage.setItem("hidePromo", "true");
+            // 오늘 하루 안보기 설정 (localStorage에 오늘 날짜 저장)
+            localStorage.setItem("hidePromoDate", new Date().toDateString());
         });
 
-        // 세션에 숨김 기록이 없다면 1.5초 뒤 팝업 띄우기
-        if (sessionStorage.getItem("hidePromo") !== "true") {
+        // 오늘 하루 안보기 설정 날짜가 오늘이 아니라면 1.5초 뒤 팝업 띄우기
+        if (localStorage.getItem("hidePromoDate") !== new Date().toDateString()) {
             setTimeout(() => {
                 promoModal.classList.add("show");
                 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 // 30초 뒤 자동 숨김
                 promoTimeout = setTimeout(() => {
-                    closePromoBanner();
+                     closePromoBanner();
                 }, 30000);
             }, 1500);
         }
